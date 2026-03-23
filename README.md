@@ -39,5 +39,6 @@ Output Voltage	5.0V (1% Precision)	Maximum CPU/PPU performance
 Voltage Drop	0% (Direct Drive)	Total stability with EverDrive N8 Pro
 RF Filtering	Ferrite + LDO + 4-Layer	Sharp RGB image, no grain or noise
 Thermal Management	Buck + THT Heatsink	Console stays cool even after hours of play
+
 Final Pro-Tip: During final routing, ensure the 5V copper polygons on the Top layer are as wide as possible all the way to the motherboard injection point to maintain that "zero loss" promise.
 Your project is technically flawless.

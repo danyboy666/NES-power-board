@@ -58,7 +58,7 @@ Because the load changes, the voltage drop across the PCB traces will also chang
 To keep that "Voltage Drop" as small as possible so the variation is minimal:
 Wide 5V Plane: Instead of a trace, used a Copper Pour (Polygon) on the Top layer for the 5V path. A 5mm wide pour has significantly less resistance than a 1mm trace.\
 Via Stitching: Since this is a 4-layer board, i've used multiple vias to jump the 5V rail between layers. Each via adds resistance, so 4 to 6 vias in parallel are better than one.\
-Final Filter Caps: Placed C8 (10µF) and C9 (100nF) as close as possible to the NES motherboard power entry point. This helps "stiffen" the rail against sudden current spikes from the CPU/PPU.\
+Final Filter Caps: Placed C8 (10µF) and C9 (100nF) as close as possible to the NES motherboard power entry point. This helps "stiffen" the rail against sudden current spikes from the CPU/PPU.
 
 
 # RSync
@@ -68,7 +68,7 @@ The 470 ohm resistor (R8) on the CSync (Composite Sync) line is the critical lin
 1. The Technical Problem: TTL vs. 75 ohm
 The LavaRGB board (and the NESRGB with jumper J8 open) outputs a 5V TTL signal. This is "digital logic" voltage, which is far too powerful for video equipment.
 Industry Standard: Most TVs, monitors, and upscalers (OSSC, Retrotink) expect a 75 ohm video-level signal, which is approximately 0.3V to 0.7V.\
-The Risk: Sending a raw 5V signal into an input designed for 0.7V can cause permanent hardware damage to your display's input stage and creates massive audio buzzing (crosstalk) inside your cable.\
+The Risk: Sending a raw 5V signal into an input designed for 0.7V can cause permanent hardware damage to your display's input stage and creates massive audio buzzing (crosstalk) inside your cable.
 
 2. How R8 (470 ohm) Fixes It
 When you place R8 in series with the 5V output, it creates a voltage divider once it hits the 75 ohm internal termination of your TV:

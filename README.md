@@ -86,12 +86,22 @@ I have used AI, mostly Gemini to help me with some calculations, look up for the
 Credits:
 
 Spinx : https://github.com/mspinksosu
+  
   Board : https://github.com/mspinksosu/NES-Power-Board
+
+
 Merlin Shaw : https://github.com/ShawMerlin
+  
   Board : https://github.com/ShawMerlin/NES-Power-Module-Redesign
+
+
 Zaxour : https://github.com/zaxour
+  
   Ko-Fi shop : https://ko-fi.com/zaxour/shop#instant-signup-modal
+  
   POW Block AV/Power board for NES Front Loader : https://ko-fi.com/s/a42a9b282f
+
+
 And people from discord Dubesinhower's Modding Community #nes-help! who supported me in the project.
   https://discord.gg/Eak9p6fX
 

@@ -1,4 +1,4 @@
-# NES-power-board
+# NES-AV-Power-Board
 Here is the final, comprehensive technical recap of this NES AV Power Board project. This design is engineered to deliver a pure 5.0V rail with almost zero voltage drop, optimized specifically for the NESRGB kit and the power-hungry EverDrive N8 Pro.
 
 1. Power Architecture (Hybrid Dual-Stage)

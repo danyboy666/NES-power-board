@@ -110,7 +110,7 @@ I have used AI, mostly Gemini to help me with some calculations, look up for the
 
 Spinx : https://github.com/mspinksosu
   
-        > Board : [https://github.com/mspinksosu/NES-Power-Board](url)
+        > Board : []([url](https://github.com/mspinksosu/NES-Power-Board))
 
 
 Merlin Shaw : https://github.com/ShawMerlin

@@ -51,12 +51,12 @@ The system load isn't static; it fluctuates based on what the console is doing:
 Menu/Idle: ~500mA
 Gaming (EverDrive N8 Pro): ~850mA - 950mA
 Startup/Inrush: Brief spikes > 1.0A
-Because the load changes, the voltage drop across your 1.5A Fuse and PCB traces will also change. If you calibrate the LDO to 5.00V at idle, it might drop to 4.92V during heavy gameplay.
+Because the load changes, the voltage drop PCB traces will also change. If you calibrate the LDO to 5.00V at idle, it might drop a bit during heavy gameplay.
 
 2. PCB Layout to Minimize Variation
 To keep that "Voltage Drop" as small as possible so the variation is minimal:
 Wide 5V Plane: Instead of a trace, used a Copper Pour (Polygon) on the Top layer for the 5V path. A 5mm wide pour has significantly less resistance than a 1mm trace.
-Via Stitching: Since this is a 4-layer board, i've used multiple vias to jump the 5V rail between layerss. Each via adds resistance, so 4 to 6 vias in parallel are better than one.
+Via Stitching: Since this is a 4-layer board, i've used multiple vias to jump the 5V rail between layers. Each via adds resistance, so 4 to 6 vias in parallel are better than one.
 Final Filter Caps: Placed C8 (10µF) and C9 (100nF) as close as possible to the NES motherboard power entry point. This helps "stiffen" the rail against sudden current spikes from the CPU/PPU.
 
 

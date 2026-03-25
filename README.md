@@ -12,7 +12,7 @@ Key Component: Bourns SRP4020TA-2R2M inductor (2.2µH, 5.5A saturation) ensures 
 Stage 2: Linear Regulation (LDO - MCP1827S TO-220):
 Role: Refines the 5.75V into a perfect 5.0V output.
 THT Format + Heatsink: The TO-220 package with a dedicated heatsink provides maximum thermal robustness and ultra-stable regulation.
-Zero Drop (Direct Drive): The circuit is designed to route the 5V directly to the motherboard with no obstacles, guaranteeing absolutely no voltage drop even under peak loads (~900mA).
+Zero Drop (Direct Drive): The circuit is designed to route the 5V directly to the motherboard with no obstacles, guaranteeing absolutely almost no voltage drop even under peak loads (~900mA).
 
 2. High-Performance Filtering (Audio & Video)
 Every measure has been taken to suppress electronic noise and "jailbars":

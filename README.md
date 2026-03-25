@@ -1,5 +1,5 @@
 # NES-power-board
-Here is the final, comprehensive technical recap of your "Ultra-Fidelity" NES Power Board project. This design is engineered to deliver a pure 5.0V rail with zero voltage drop, optimized specifically for the NESRGB kit and the power-hungry EverDrive N8 Pro.
+Here is the final, comprehensive technical recap of this "Ultra-Fidelity" NES Power Board project. This design is engineered to deliver a pure 5.0V rail with zero voltage drop, optimized specifically for the NESRGB kit and the power-hungry EverDrive N8 Pro.
 
 1. Power Architecture (Hybrid Dual-Stage)
 The circuit replaces the original 7805 linear regulator with a high-efficiency power cascade to eliminate heat and electrical noise.
@@ -51,6 +51,7 @@ The 470 ohm resistor (R8) on the CSync (Composite Sync) line is the critical lin
 The LavaRGB board (and the NESRGB with jumper J8 open) outputs a 5V TTL signal. This is "digital logic" voltage, which is far too powerful for video equipment.
 Industry Standard: Most TVs, monitors, and upscalers (OSSC, Retrotink) expect a 75 ohm video-level signal, which is approximately 0.3V to 0.7V.
 The Risk: Sending a raw 5V signal into an input designed for 0.7V can cause permanent hardware damage to your display's input stage and creates massive audio buzzing (crosstalk) inside your cable.
+
 2. How R8 (470 ohm) Fixes It
 When you place R8 in series with the 5V output, it creates a voltage divider once it hits the 75 ohm internal termination of your TV:
 The Math: 
@@ -64,7 +65,7 @@ You mentioned your SCART cable has an additional 180 ohm resistor inside. This m
 The Math: 
 5V x (75/650 + 75)) = 0.51V
 
-The Result: 0.51V is still perfectly safe and stable. This explains why you had no issues with your old board; the signal was strong enough to trigger the sync but weak enough to be safe.
+The Result: 0.51V is still perfectly safe and stable. This explains why I,ve had no issues with the Merlins Shaw board; the signal was strong enough to trigger the sync but weak enough to be safe.
 
 4. Why the Jumper is a "Master" Design Choice
 By adding a solder jumper in parallel with R8, you have made your board universally compatible:

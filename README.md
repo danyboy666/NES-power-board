@@ -51,7 +51,7 @@ The system load isn't static; it fluctuates based on what the console is doing:
 Menu/Idle: ~500mA
 Gaming (EverDrive N8 Pro): ~850mA - 950mA
 Startup/Inrush: Brief spikes > 1.0A
-Because the load changes, the voltage drop PCB traces will also change. If you calibrate the LDO to 5.00V at idle, it might drop a bit during heavy gameplay.
+Because the load changes, the voltage drop across the PCB traces will also change. Even if I've calibrated the LDO to 5.00V at idle, it might drop a bit during heavy gameplay.
 
 2. PCB Layout to Minimize Variation
 To keep that "Voltage Drop" as small as possible so the variation is minimal:

@@ -90,6 +90,8 @@ Spinx : https://github.com/mspinksosu
 Merlin Shaw : https://github.com/ShawMerlin
   Board : https://github.com/ShawMerlin/NES-Power-Module-Redesign
 Zaxour : https://github.com/zaxour
+  Ko-Fi shop : https://ko-fi.com/zaxour/shop#instant-signup-modal
+  POW Block AV/Power board for NES Front Loader : https://ko-fi.com/s/a42a9b282f
 And people from discord Dubesinhower's Modding Community #nes-help! who supported me in the project.
   https://discord.gg/Eak9p6fX
 
@@ -101,3 +103,9 @@ Here is what the PCB looks like
 
 <img width="1141" height="1137" alt="image" src="https://github.com/user-attachments/assets/daf3ed98-f145-4e6a-831e-4ed0dbfbd842" />
 
+<img width="1170" height="1094" alt="image" src="https://github.com/user-attachments/assets/da95948e-b59b-415c-97e3-a5cf7538ef44" />
+
+<img width="1137" height="1080" alt="image" src="https://github.com/user-attachments/assets/9c5a28f8-9dc5-41a4-96d9-abbe02464299" />
+
+This was made with EasyEDA. If you send the Gerbers to JLCPCB it will be cheaper. Leave the defaults JLCPCB settings. Select the board color you want. BOM cost is about $35 CDA and 25$ USD. You can get most of the parts on digikey. 
+The TVS diode (1.5SMC6.8A-E3/9AT) is not available at Digikey currently. You will ned to source that part elsewhere for now or find a suitable replacement.

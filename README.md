@@ -102,7 +102,7 @@ Zaxour : https://github.com/zaxour
     POW Block AV/Power board for NES Front Loader : https://ko-fi.com/s/a42a9b282f
 
 
-And people from discord Dubesinhower's Modding Community #nes-help! who supported me in the project.
+And people from discord Dubesinhower's Modding Community #nes-help! who supported me with this project.
     
     https://discord.gg/Eak9p6fX
 

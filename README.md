@@ -1,5 +1,5 @@
 # NES-power-board
-Here is the final, comprehensive technical recap of this "Ultra-Fidelity" NES Power Board project. This design is engineered to deliver a pure 5.0V rail with zero voltage drop, optimized specifically for the NESRGB kit and the power-hungry EverDrive N8 Pro.
+Here is the final, comprehensive technical recap of this NES AV Power Board project. This design is engineered to deliver a pure 5.0V rail with almost zero voltage drop, optimized specifically for the NESRGB kit and the power-hungry EverDrive N8 Pro.
 
 1. Power Architecture (Hybrid Dual-Stage)
 The circuit replaces the original 7805 linear regulator with a high-efficiency power cascade to eliminate heat and electrical noise.
@@ -87,7 +87,7 @@ The Math:
 
 The Result: 0.51V is still perfectly safe and stable. This explains why I've had no issues with the Merlin Shaw's board; the signal was strong enough to trigger the sync but weak enough to be safe.
 
-4. Why the Jumper is a "Master" Design Choice
+4. Why the Jumper is a "Safe" Design Choice
 By adding a solder jumper in parallel with R8, we've made the board universally compatible:
 Jumper OPEN (Default): Safe for "straight-through" cables and standard Genesis 2 Component cables (like HDRV).
 Jumper CLOSED: Ideal if you ever use a high-end "CSync" cable that already has a large resistor (like 470 ohm) built-in. Bypassing R8 prevents the signal from becoming too weak to display.

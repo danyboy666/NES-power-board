@@ -26,11 +26,11 @@ Stackup Structure:
 Top (PWR/Signal): Wide power traces + Ground Copper Pour.
 Internal 1 (GND): Solid Ground Plane.
 Internal 2 (GND): Solid Ground Plane.
-Bottom (Signal/GND): Protected Video/Audio signals + Ground Copper Pour.
+Bottom (PWR/Signal): Protected Video/Audio signals + Ground Copper Pour.
 Via Stitching: Massive via stitching connects all ground planes to minimize impedance and dissipate any residual heat into the internal layers.
 
 4. External Power & Connectivity
-Power Brick: Use the Triad WSU090-1300-R (9V DC, 1.3A, Center Negative). This is essential to eliminate the 60Hz "hum" often found in modified audio circuits.
+Power Brick: Use the Triad WSU090-1300-R (9V DC, 1.3A, Center Negative). You can use up to a 12V DC 2A power brick. This is essential to eliminate the 60Hz "hum" often found in modified audio circuits.
 Input Protection (D1): CDBHD240-G bridge rectifier for total protection against reverse polarity.
 Video Output: Mini-DIN 9 connector with Sega Genesis 2 compatible pinout for easy access to high-quality cables.
 Summary of Critical Parameters
@@ -40,5 +40,47 @@ Voltage Drop	0% (Direct Drive)	Total stability with EverDrive N8 Pro
 RF Filtering	Ferrite + LDO + 4-Layer	Sharp RGB image, no grain or noise
 Thermal Management	Buck + THT Heatsink	Console stays cool even after hours of play
 
-Final Pro-Tip: During final routing, ensure the 5V copper polygons on the Top layer are as wide as possible all the way to the motherboard injection point to maintain that "zero loss" promise.
-Your project is technically flawless.
+During final routing, i've ensure the 5V copper polygons on the Top layer and bottom were as wide as possible all the way to the motherboard injection point to maintain that "zero loss" promise.
+
+
+RSync
+
+The 470 ohm resistor (R8) on the CSync (Composite Sync) line is the critical link between the high-voltage output of your LavaRGB and the sensitive video standards of your TV or upscaler.
+
+1. The Technical Problem: TTL vs. 75 ohm
+The LavaRGB board (and the NESRGB with jumper J8 open) outputs a 5V TTL signal. This is "digital logic" voltage, which is far too powerful for video equipment.
+Industry Standard: Most TVs, monitors, and upscalers (OSSC, Retrotink) expect a 75 ohm video-level signal, which is approximately 0.3V to 0.7V.
+The Risk: Sending a raw 5V signal into an input designed for 0.7V can cause permanent hardware damage to your display's input stage and creates massive audio buzzing (crosstalk) inside your cable.
+2. How R8 (470 ohm) Fixes It
+When you place R8 in series with the 5V output, it creates a voltage divider once it hits the 75 ohm internal termination of your TV:
+The Math: 
+5V x (75/470 + 75)) = 0.68V
+
+The Result: This brings the dangerous 5V down to a perfect, safe 0.68V, which is the "Goldilocks" zone for almost every display on the market.
+
+3. Why Your Current Setup (470 ohm + 180 ohm Cable) Works
+You mentioned your SCART cable has an additional 180 ohm resistor inside. This means your total resistance is 470 ohm + 180 ohm = 0.51V
+
+The Math: 
+5V x (75/650 + 75)) = 0.51V
+
+The Result: 0.51V is still perfectly safe and stable. This explains why you had no issues with your old board; the signal was strong enough to trigger the sync but weak enough to be safe.
+
+4. Why the Jumper is a "Master" Design Choice
+By adding a solder jumper in parallel with R8, you have made your board universally compatible:
+Jumper OPEN (Default): Safe for "straight-through" cables and standard Genesis 2 Component cables (like HDRV).
+Jumper CLOSED: Ideal if you ever use a high-end "CSync" cable that already has a large resistor (like 470) built-in. Bypassing R8 prevents the signal from becoming too weak to display.
+
+Final Technical Summary for R8
+Configuration	Total Resistance	Signal Level	Compatibility
+Direct (0 ohm)	75 ohm (TV)	~5.0V	❌ Dangerous TTL
+R8 Only (470 ohm)	545 ohm ~0.68V	✅ Standard / Safe
+R8 + 180 ohm Cable	725 ohm ~0.51V	✅ Stable / Very Safe
+Conclusion: Keep the 470 ohm (R8) + Solder Jumper configuration. It offers the best protection for your hardware while providing a "fail-safe" for any cable you might use in the future.
+
+
+Disclosure:
+
+I have used AI, mostly Gemini to help me with some calculations, look up for the parts needed in the project. Also for the description of this project. I wanted a clean 5V rail at the output of the board for the NES and a safe solution for a new NES power board. This board is a remix of Spinx and Merlin Shaw's project. I've kept some quality of life improvements from Shaw's design like the internal/external composite and audio selection. Also decided to use e Mini DIN-9 port (genesis 2) since it's the cable I have on had to test with. Zaxour helped me finalize the design and pointed to me a couple things I needed to verify; the componants layout of the buck regulator and also RSync resistor. I am in no way as good as the pros who did this all of their lives this is why i've relied partly on AI. It is a time saver but mostly a tool. I still had to do most of the leg work myself.
+
+

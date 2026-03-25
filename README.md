@@ -55,7 +55,8 @@ The Risk: Sending a raw 5V signal into an input designed for 0.7V can cause perm
 2. How R8 (470 ohm) Fixes It
 When you place R8 in series with the 5V output, it creates a voltage divider once it hits the 75 ohm internal termination of your TV:
 The Math: 
-5V x (75/470 + 75)) = 0.68V
+
+        5V x (75/470 + 75)) = 0.68V
 
 The Result: This brings the dangerous 5V down to a perfect, safe 0.68V, which is the "Goldilocks" zone for almost every display on the market.
 
@@ -63,7 +64,8 @@ The Result: This brings the dangerous 5V down to a perfect, safe 0.68V, which is
 The SCART cable has an additional 180 ohm resistor inside. This means your total resistance is 470 ohm + 180 ohm = 0.51V
 
 The Math: 
-5V x (75/650 + 75)) = 0.51V
+
+        5V x (75/650 + 75)) = 0.51V
 
 The Result: 0.51V is still perfectly safe and stable. This explains why I've had no issues with the Merlin Shaw's board; the signal was strong enough to trigger the sync but weak enough to be safe.
 

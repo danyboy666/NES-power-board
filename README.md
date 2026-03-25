@@ -83,4 +83,21 @@ Disclosure:
 
 I have used AI, mostly Gemini to help me with some calculations, look up for the parts needed in the project. Also for the description of this project. I wanted a clean 5V rail at the output of the board for the NES and a safe solution for a new NES power board. This board is a remix of Spinx and Merlin Shaw's project. I've kept some quality of life improvements from Shaw's design like the internal/external composite and audio selection. Also decided to use e Mini DIN-9 port (genesis 2) since it's the cable I have on had to test with. Zaxour helped me finalize the design and pointed to me a couple things I needed to verify; the componants layout of the buck regulator and also RSync resistor. I am in no way as good as the pros who did this all of their lives this is why i've relied partly on AI. It is a time saver but mostly a tool. I still had to do most of the leg work myself.
 
+Credits:
+
+Spinx : https://github.com/mspinksosu
+  Board : https://github.com/mspinksosu/NES-Power-Board
+Merlin Shaw : https://github.com/ShawMerlin
+  Board : https://github.com/ShawMerlin/NES-Power-Module-Redesign
+Zaxour : https://github.com/zaxour
+And people from discord Dubesinhower's Modding Community #nes-help! who supported me in the project.
+  https://discord.gg/Eak9p6fX
+
+Note: 
+
+I will upload the schematic, the gerbers and the BOM once i've finished testing this board.
+
+Here is what the PCB looks like
+
+<img width="1141" height="1137" alt="image" src="https://github.com/user-attachments/assets/daf3ed98-f145-4e6a-831e-4ed0dbfbd842" />
 

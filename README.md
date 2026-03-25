@@ -1,5 +1,5 @@
 # NES-AV-Power-Board
-Here is the final, comprehensive technical recap of this NES AV Power Board project. This design is engineered to deliver a pure 5.0V rail with almost zero voltage drop, optimized specifically for the NESRGB kit and the power-hungry EverDrive N8 Pro.
+Here is the technical recap of this NES AV Power Board project. This design is engineered to deliver a pure 5.0V rail with almost zero voltage drop, optimized specifically for the NESRGB kit and the power-hungry EverDrive N8 Pro.
 
 1. Power Architecture (Hybrid Dual-Stage)
 The circuit replaces the original 7805 linear regulator with a high-efficiency power cascade to eliminate heat and electrical noise.
@@ -104,7 +104,11 @@ Conclusion: Keeping the 470 ohm (R8) + Solder Jumper configuration offers the be
 
 # Disclosure:
 
-I have used AI, mostly Gemini to help me with some calculations, look up for the parts needed in the project. Also for the description of this project. I wanted a clean 5V rail at the output of the board for the NES and a safe solution for a new NES power board. This board is a remix of Spinx and Merlin Shaw projects. I've kept some quality of life improvements from Shaw's design like the internal/external composite and audio selection which will need to be set with a mother board style jumper. I felt the switches were too much for something that might be set just once. Also decided to use e Mini DIN-9 port (genesis 2) since it's the cable I have on had to test with. Zaxour helped me finalize the design and pointed to me a couple things I needed to verify; the componants layout of the buck regulator and also RSync resistor. I am in no way as good as the pros who did this all of their lives this is why i've relied partly on AI. It is a time saver but mostly a tool. I still had to do most of the leg work myself.
+I have used AI, mostly Gemini to help me with some calculations, look up for the parts needed in the project. Also for the description of this project. I wanted a clean 5V rail at the output of the board for the NES as well as a safe solution for a new NES power board. 
+
+This board is a remix of Spinx and Merlin Shaw projects. I've kept some quality of life improvements from Shaw's design like the internal/external composite and audio selection which will need to be set with a mother board style jumper. I felt the switches were too much for something that might be set just once. Also decided to use e Mini DIN-9 port (genesis 2) since it's the cable I have on had to test with. 
+
+Zaxour helped me finalize the design and pointed to me a couple things I needed to verify; the componants layout of the buck regulator and also RSync resistor. I am in no way as good as the pros who did this all of their lives this is why i've relied partly on AI. It is a time saver but mostly a tool. I still had to do most of the leg work myself.
 
 # Credits:
 
@@ -146,7 +150,11 @@ The TVS diode (1.5SMC6.8A-E3/9AT) is not available at Digikey currently. You wil
 
 # NESRGB and LavaRGB install notes:
 
-If using a SCART cable make sure to pick one which has no componants on the RGB lines. If you happen to have a cable which has the 75 ohm and 220uF caps in them you need to desolder them because they are already included on the LavaRGB and NESRGB boards. Or you can desolder the 75 ohm and 220uF from the Lavargb and bridge those lines at the output. 
+If using a SCART cable make sure to pick one which has no componants on the RGB lines. If you happen to have a cable which has the 75 ohm and 220uF caps in them you need to desolder them because they are already included on the LavaRGB and NESRGB boards. Or you can desolder the 75 ohm and 220uF from the LavaRGB and bridge those lines at their respective outputs. 
 
 On the NESRGB board you can solder your RGB wires to the raw RGB pads instead. It will cause brightness issues if you double the resistor values. 
 I'd recommend HDRetrovision Genesis YPbPr Componants cable https://www.hdretrovision.com/genesis if you want to avoid this altogether. There is a switch on the cable itself to bypass those componants.
+
+# Testing phases:
+
+To be completed.

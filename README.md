@@ -60,7 +60,7 @@ Via Stitching: Since this is a 4-layer board, i've used multiple vias to jump th
 Final Filter Caps: Placed C8 (10µF) and C9 (100nF) as close as possible to the NES motherboard power entry point. This helps "stiffen" the rail against sudden current spikes from the CPU/PPU.
 
 
-RSync
+# RSync
 
 The 470 ohm resistor (R8) on the CSync (Composite Sync) line is the critical link between the high-voltage output of your LavaRGB and the sensitive video standards of your TV or upscaler.
 
@@ -102,11 +102,11 @@ Final Technical Summary for R8
 Conclusion: Keep the 470 ohm (R8) + Solder Jumper configuration. It offers the best protection for your hardware while providing a "fail-safe" for any cable you might use in the future.
 
 
-Disclosure:
+# Disclosure:
 
 I have used AI, mostly Gemini to help me with some calculations, look up for the parts needed in the project. Also for the description of this project. I wanted a clean 5V rail at the output of the board for the NES and a safe solution for a new NES power board. This board is a remix of Spinx and Merlin Shaw projects. I've kept some quality of life improvements from Shaw's design like the internal/external composite and audio selection which will need to be set with a mother board style jumper. I felt the switches were too much for something that might be set just once. Also decided to use e Mini DIN-9 port (genesis 2) since it's the cable I have on had to test with. Zaxour helped me finalize the design and pointed to me a couple things I needed to verify; the componants layout of the buck regulator and also RSync resistor. I am in no way as good as the pros who did this all of their lives this is why i've relied partly on AI. It is a time saver but mostly a tool. I still had to do most of the leg work myself.
 
-Credits:
+# Credits:
 
 Spinx : https://github.com/mspinksosu
   
@@ -129,7 +129,7 @@ And people from discord Dubesinhower's Modding Community #nes-help! who supporte
     
     https://discord.gg/Eak9p6fX
 
-Note: 
+# Notes: 
 
 I will upload the schematic, the gerbers and the BOM once i've finished testing this board.
 
@@ -144,7 +144,7 @@ Here is what the PCB looks like
 This was made with EasyEDA. If you send the Gerbers to JLCPCB it will be cheaper. Leave the defaults JLCPCB settings. Select the board color you want. BOM cost is about $ 35 CDA / 25 $ USD. You can get most of the parts on digikey. 
 The TVS diode (1.5SMC6.8A-E3/9AT) is not available at Digikey currently. You will need to source that part elsewhere for now or find a suitable replacement.
 
-NESRGB and LavaRGB install note :
+# NESRGB and LavaRGB install notes:
 
 If using a SCART cable make sure to pick one which has no componants on the RGB lines. If you happen to have a cable which has the 75 ohm and 220uF caps in them you need to desolder them because they are already included on the LavaRGB and NESRGB boards. Or you can desolder the 75 ohm and 220uF from the Lavargb and bridge those lines at the output. 
 

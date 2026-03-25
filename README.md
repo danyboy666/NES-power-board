@@ -42,7 +42,7 @@ Thermal Management	Buck + THT Heatsink	Console stays cool even after hours of pl
 
 During final routing, i've ensure the 5V copper polygons on the Top layer and bottom were as wide as possible all the way to the motherboard injection point to maintain that "zero loss" promise.
 
-Clarifications: "Zero Drop" is an idealized goal, not a physical reality. Every millimeter of copper, every solder joint, and every component (especially the fuse) has an internal resistance (R) 
+Clarifications: "Zero Drop" is an idealized goal, not a physical reality. Every millimeter of copper, every solder joint, and every component has an internal resistance (R) 
 that causes a voltage drop (V= i x R) as current (I) increases.
 Since the goal is a stable 5.0V at the NES motherboard input under varying loads (standard cart vs. EverDrive).
 

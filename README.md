@@ -73,10 +73,12 @@ Jumper OPEN (Default): Safe for "straight-through" cables and standard Genesis 2
 Jumper CLOSED: Ideal if you ever use a high-end "CSync" cable that already has a large resistor (like 470) built-in. Bypassing R8 prevents the signal from becoming too weak to display.
 
 Final Technical Summary for R8
-Configuration	Total Resistance	Signal Level	Compatibility
-Direct (0 ohm)	75 ohm (TV)	~5.0V	❌ Dangerous TTL
-R8 Only (470 ohm)	545 ohm ~0.68V	✅ Standard / Safe
-R8 + 180 ohm Cable	725 ohm ~0.51V	✅ Stable / Very Safe
+
+    Configuration	Total Resistance	Signal Level	Compatibility
+    Direct (0 ohm)	75 ohm (TV)	~5.0V	❌ Dangerous TTL
+    R8 Only (470 ohm)	545 ohm ~0.68V	✅ Standard / Safe
+    R8 + 180 ohm Cable	725 ohm ~0.51V	✅ Stable / Very Safe
+
 Conclusion: Keep the 470 ohm (R8) + Solder Jumper configuration. It offers the best protection for your hardware while providing a "fail-safe" for any cable you might use in the future.
 
 

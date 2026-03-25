@@ -21,7 +21,7 @@ Dedicated PPU Filtering: A 100nF ceramic capacitor (X7R) added directly under th
 TVS Diode (1.5SMC6.8A): Provides protection against transient voltage spikes (ESD) without interfering with the clean 5V rail.
 
 3. PCB Design (4-Layer Stackup)
-The layer stack is configured for total electromagnetic shielding (Faraday Cage effect):
+The layer stack is configured for total electromagnetic shielding:
 Stackup Structure:
 Top (PWR/Signal): Wide power traces + Ground Copper Pour.
 Internal 1 (GND): Solid Ground Plane.
@@ -36,7 +36,7 @@ Video Output: Mini-DIN 9 connector with Sega Genesis 2 compatible pinout for eas
 Summary of Critical Parameters
 Element	Value / Status	Expected Result
 Output Voltage	5.0V (1% Precision)	Maximum CPU/PPU performance
-Voltage Drop	0% (Direct Drive)	Total stability with EverDrive N8 Pro
+Voltage Drop	Minimal        	Total stability with EverDrive N8 Pro
 RF Filtering	Ferrite + LDO + 4-Layer	Sharp RGB image, no grain or noise
 Thermal Management	Buck + THT Heatsink	Console stays cool even after hours of play
 

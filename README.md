@@ -54,6 +54,7 @@ The Risk: Sending a raw 5V signal into an input designed for 0.7V can cause perm
 
 2. How R8 (470 ohm) Fixes It
 When you place R8 in series with the 5V output, it creates a voltage divider once it hits the 75 ohm internal termination of your TV:
+
 The Math: 
 
         5V x (75/470 + 75)) = 0.68V

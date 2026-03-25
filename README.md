@@ -113,4 +113,4 @@ The TVS diode (1.5SMC6.8A-E3/9AT) is not available at Digikey currently. You wil
 NESRGB and LavaRGB install note :
 
 If using a SCART cable make sure to pick one which has no componants on the RGB lines. If you happen to have a cable which has the 75 ohm and 220uF caps in them you need to desolder them because they are already included on the LavaRGB and NESRGB boards. Or you can desolder the 75 ohm and 220uF from the Lavargb and bridge those lines at the output. On the NESRGB board you can solder your RGB wires to the raw RGB pads instead. It will cause brightness issues if you double the resistor values. 
-I'd recommend HDRetrovision Genesis YPbPr Componants cable [https://www.hdretrovision.com/snes](https://www.hdretrovision.com/genesis) if you want to avoid this altogether. There is a switch on the cable itself to bypass those componants.
+I'd recommend HDRetrovision Genesis YPbPr Componants cable https://www.hdretrovision.com/genesis if you want to avoid this altogether. There is a switch on the cable itself to bypass those componants.

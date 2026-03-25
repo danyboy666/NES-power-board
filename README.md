@@ -59,16 +59,16 @@ The Math:
 
 The Result: This brings the dangerous 5V down to a perfect, safe 0.68V, which is the "Goldilocks" zone for almost every display on the market.
 
-3. Why Your Current Setup (470 ohm + 180 ohm Cable) Works
-You mentioned your SCART cable has an additional 180 ohm resistor inside. This means your total resistance is 470 ohm + 180 ohm = 0.51V
+3. Why my current setup (470 ohm + 180 ohm Cable) works
+The SCART cable has an additional 180 ohm resistor inside. This means your total resistance is 470 ohm + 180 ohm = 0.51V
 
 The Math: 
 5V x (75/650 + 75)) = 0.51V
 
-The Result: 0.51V is still perfectly safe and stable. This explains why I,ve had no issues with the Merlins Shaw board; the signal was strong enough to trigger the sync but weak enough to be safe.
+The Result: 0.51V is still perfectly safe and stable. This explains why I've had no issues with the Merlin Shaw's board; the signal was strong enough to trigger the sync but weak enough to be safe.
 
 4. Why the Jumper is a "Master" Design Choice
-By adding a solder jumper in parallel with R8, you have made your board universally compatible:
+By adding a solder jumper in parallel with R8, we've made the board universally compatible:
 Jumper OPEN (Default): Safe for "straight-through" cables and standard Genesis 2 Component cables (like HDRV).
 Jumper CLOSED: Ideal if you ever use a high-end "CSync" cable that already has a large resistor (like 470) built-in. Bypassing R8 prevents the signal from becoming too weak to display.
 

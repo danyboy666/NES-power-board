@@ -35,12 +35,29 @@ Input Protection (D1): CDBHD240-G bridge rectifier for total protection against 
 Video Output: Mini-DIN 9 connector with Sega Genesis 2 compatible pinout for easy access to high-quality cables.
 Summary of Critical Parameters
 Element	Value / Status	Expected Result
-Output Voltage	5.0V (1% Precision)	Maximum CPU/PPU performance
-Voltage Drop	Minimal        	Total stability with EverDrive N8 Pro
-RF Filtering	Ferrite + LDO + 4-Layer	Sharp RGB image, no grain or noise
+Output Voltage	5.0V (1% Precision)	        Maximum CPU/PPU performance
+Voltage Drop	Zero Drop (Direct Drive)       	Total stability with EverDrive N8 Pro
+RF Filtering	Ferrite + LDO + 4-Layer	        Sharp RGB image, no grain or noise
 Thermal Management	Buck + THT Heatsink	Console stays cool even after hours of play
 
 During final routing, i've ensure the 5V copper polygons on the Top layer and bottom were as wide as possible all the way to the motherboard injection point to maintain that "zero loss" promise.
+
+Clarifications: "Zero Drop" is an idealized goal, not a physical reality. Every millimeter of copper, every solder joint, and every component (especially the fuse) has an internal resistance (R) 
+that causes a voltage drop (V= i x R) as current (I) increases.
+Since the goal is a stable 5.0V at the NES motherboard input under varying loads (standard cart vs. EverDrive).
+
+1. The "Dynamic" Load Problem
+The system load isn't static; it fluctuates based on what the console is doing:
+Menu/Idle: ~500mA
+Gaming (EverDrive N8 Pro): ~850mA - 950mA
+Startup/Inrush: Brief spikes > 1.0A
+Because the load changes, the voltage drop across your 1.5A Fuse and PCB traces will also change. If you calibrate the LDO to 5.00V at idle, it might drop to 4.92V during heavy gameplay.
+
+2. PCB Layout to Minimize Variation
+To keep that "Voltage Drop" as small as possible so the variation is minimal:
+Wide 5V Plane: Instead of a trace, used a Copper Pour (Polygon) on the Top layer for the 5V path. A 5mm wide pour has significantly less resistance than a 1mm trace.
+Via Stitching: Since this is a 4-layer board, i've used multiple vias to jump the 5V rail between layerss. Each via adds resistance, so 4 to 6 vias in parallel are better than one.
+Final Filter Caps: Placed C8 (10µF) and C9 (100nF) as close as possible to the NES motherboard power entry point. This helps "stiffen" the rail against sudden current spikes from the CPU/PPU.
 
 
 RSync
@@ -87,7 +104,7 @@ Conclusion: Keep the 470 ohm (R8) + Solder Jumper configuration. It offers the b
 
 Disclosure:
 
-I have used AI, mostly Gemini to help me with some calculations, look up for the parts needed in the project. Also for the description of this project. I wanted a clean 5V rail at the output of the board for the NES and a safe solution for a new NES power board. This board is a remix of Spinx and Merlin Shaw's project. I've kept some quality of life improvements from Shaw's design like the internal/external composite and audio selection which will need to be set with a mother board style jumper. I felt the switches were too much for something that might be set once. Also decided to use e Mini DIN-9 port (genesis 2) since it's the cable I have on had to test with. Zaxour helped me finalize the design and pointed to me a couple things I needed to verify; the componants layout of the buck regulator and also RSync resistor. I am in no way as good as the pros who did this all of their lives this is why i've relied partly on AI. It is a time saver but mostly a tool. I still had to do most of the leg work myself.
+I have used AI, mostly Gemini to help me with some calculations, look up for the parts needed in the project. Also for the description of this project. I wanted a clean 5V rail at the output of the board for the NES and a safe solution for a new NES power board. This board is a remix of Spinx and Merlin Shaw projects. I've kept some quality of life improvements from Shaw's design like the internal/external composite and audio selection which will need to be set with a mother board style jumper. I felt the switches were too much for something that might be set just once. Also decided to use e Mini DIN-9 port (genesis 2) since it's the cable I have on had to test with. Zaxour helped me finalize the design and pointed to me a couple things I needed to verify; the componants layout of the buck regulator and also RSync resistor. I am in no way as good as the pros who did this all of their lives this is why i've relied partly on AI. It is a time saver but mostly a tool. I still had to do most of the leg work myself.
 
 Credits:
 

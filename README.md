@@ -157,4 +157,4 @@ I'd recommend HDRetrovision Genesis YPbPr Componants cable https://www.hdretrovi
 
 # Testing phases:
 
-To be completed.
+        To be completed.

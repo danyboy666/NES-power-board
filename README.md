@@ -112,7 +112,7 @@ I will upload the schematic, the gerbers and the BOM once i've finished testing 
 
 Here is what the PCB looks like
 
-<img width="1141" height="1137" alt="image" src="https://github.com/user-attachments/assets/daf3ed98-f145-4e6a-831e-4ed0dbfbd842" />
+<img width="883" height="892" alt="image" src="https://github.com/user-attachments/assets/c269ffcb-3b12-4044-ad03-3fb9b158f31c" />
 
 <img width="1170" height="1094" alt="image" src="https://github.com/user-attachments/assets/da95948e-b59b-415c-97e3-a5cf7538ef44" />
 

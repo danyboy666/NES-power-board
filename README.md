@@ -73,7 +73,7 @@ The Result: 0.51V is still perfectly safe and stable. This explains why I've had
 4. Why the Jumper is a "Master" Design Choice
 By adding a solder jumper in parallel with R8, we've made the board universally compatible:
 Jumper OPEN (Default): Safe for "straight-through" cables and standard Genesis 2 Component cables (like HDRV).
-Jumper CLOSED: Ideal if you ever use a high-end "CSync" cable that already has a large resistor (like 470) built-in. Bypassing R8 prevents the signal from becoming too weak to display.
+Jumper CLOSED: Ideal if you ever use a high-end "CSync" cable that already has a large resistor (like 470 ohm) built-in. Bypassing R8 prevents the signal from becoming too weak to display.
 
 Final Technical Summary for R8
 

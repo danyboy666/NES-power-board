@@ -107,5 +107,5 @@ Here is what the PCB looks like
 
 <img width="1137" height="1080" alt="image" src="https://github.com/user-attachments/assets/9c5a28f8-9dc5-41a4-96d9-abbe02464299" />
 
-This was made with EasyEDA. If you send the Gerbers to JLCPCB it will be cheaper. Leave the defaults JLCPCB settings. Select the board color you want. BOM cost is about $35 CDA and 25$ USD. You can get most of the parts on digikey. 
+This was made with EasyEDA. If you send the Gerbers to JLCPCB it will be cheaper. Leave the defaults JLCPCB settings. Select the board color you want. BOM cost is about $35 CDA / 25$ USD. You can get most of the parts on digikey. 
 The TVS diode (1.5SMC6.8A-E3/9AT) is not available at Digikey currently. You will ned to source that part elsewhere for now or find a suitable replacement.

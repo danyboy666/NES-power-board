@@ -107,7 +107,7 @@ Jumper CLOSED: Ideal if you ever use a high-end "CSync" cable that already has a
 Final Technical Summary for R8
 
     Configuration	           Total Resistance	        Signal Level	Compatibility
-    Direct (0 ohm)	           75 ohm (TV)	             ~5.0V	❌ Dangerous TTL
+    Direct (0 ohm)	           75 ohm (TV)	              ~5.0V	❌ Dangerous TTL
     R8 Only (470 ohm)	        545 ohm ~0.68V	          ✅ Standard / Safe
     R8 + 180 ohm Cable	        725 ohm ~0.51V	          ✅ Stable / Very Safe
 

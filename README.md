@@ -120,6 +120,8 @@ I have used AI, mostly Gemini to help me with some calculations, look up for the
 
 This board is a remix of Spinx and Merlin Shaw projects. I've kept some quality of life improvements from Shaw's design like the internal/external composite and audio selection which will need to be set with a mother board style jumper. I felt the switches were too much for something that might be set just once. Also decided to use e Mini DIN-9 port (genesis 2) since it's the cable I have on had to test with. 
 
+This will be the only variation of the board. It is suitable for use with an NES modified with RGB or simply as a replacement for the old power board. If you plan on using this with an unmodified NES you can omit the Mini DIN9 port as well as the palette switch. Just remember to set the jumpers to internal.
+
 Zaxour helped me finalize the design and pointed to me a couple things I needed to verify; the componants layout of the buck regulator and also RSync resistor. I am in no way as good as the pros who did this all of their lives this is why i've relied partly on AI. It is a time saver but mostly a tool. I still had to do most of the leg work myself.
 
 # Credits:

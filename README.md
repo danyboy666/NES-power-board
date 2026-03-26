@@ -24,7 +24,7 @@ TVS Diode (1.5SMC6.8A): Provides protection against transient voltage spikes (ES
 
 3. PCB Design (4-Layer Stackup)
 
-The layer stack is configured for total electromagnetic shielding:
+The layer stack is configured for improved EMI performance:
 Stackup Structure:
 Top (PWR/Signal): Wide power traces + Ground Copper Pour.
 Internal 1 (GND): Solid Ground Plane.

@@ -34,18 +34,19 @@ Via Stitching: Massive via stitching connects all ground planes to minimize impe
 
 4. External Power & Connectivity
 
-Power Brick: Use the Triad WSU090-1300-R (9V DC, 1.3A, Center Negative). You can use up to a 12V DC 2A power brick. This is essential to eliminate the 60Hz "hum" often found in modified audio circuits.
+Power Brick: Use the Triad WSU090-1300-R (9V DC, 1.3A, Center Negative). You can use up to a 12V DC 2A power brick. 
 Input Protection (D1): CDBHD240-G bridge rectifier for total protection against reverse polarity.
 Video Output: Mini-DIN 9 connector with Sega Genesis 2 compatible pinout for easy access to high-quality cables.\
 
 Summary of Critical Parameters
-   Element	          Value / Status	              Expected Result
-Output Voltage	        5.0V (1% Precision)	        Maximum CPU/PPU performance
-Voltage Drop	        Close to Zero Drop        	Total stability with EverDrive N8 Pro
-RF Filtering	        Ferrite + LDO + 4-Layer	        Sharp RGB image, no grain or noise
-Thermal Management	Buck + THT Heatsink	        Console stays cool even after hours of play
 
-During final routing, i've ensure the 5V copper polygons on the Top layer and bottom were as wide as possible all the way to the motherboard injection point to maintain that "zero loss" promise.
+   Element	             Value / Status	              Expected Result
+Output Voltage	        5.0V (1% Precision)	        Maximum CPU/PPU performance
+Voltage Drop	        Close to Zero Drop        	  Total stability with EverDrive N8 Pro
+RF Filtering	        Ferrite + LDO + 4-Layer	     Sharp RGB image, no grain or noise
+Thermal Management	  Buck + THT Heatsink	        Console stays cool even after hours of play
+
+During final routing, i've ensured the 5V copper polygons on the Top layer and bottom were as wide as possible all the way to the motherboard injection point to maintain that "zero loss" promise.
 
 Clarifications: "Zero Drop" is an idealized goal, not a physical reality. Every millimeter of copper, every solder joint, and every component has an internal resistance (R) 
 that causes a voltage drop (V= i x R) as current (I) increases.
@@ -105,10 +106,10 @@ Jumper CLOSED: Ideal if you ever use a high-end "CSync" cable that already has a
 
 Final Technical Summary for R8
 
-    Configuration	        Total Resistance	Signal Level	Compatibility
-    Direct (0 ohm)	        75 ohm (TV)	        ~5.0V	❌ Dangerous TTL
-    R8 Only (470 ohm)	        545 ohm ~0.68V	        ✅ Standard / Safe
-    R8 + 180 ohm Cable	        725 ohm ~0.51V	        ✅ Stable / Very Safe
+    Configuration	           Total Resistance	        Signal Level	Compatibility
+    Direct (0 ohm)	           75 ohm (TV)	             ~5.0V	❌ Dangerous TTL
+    R8 Only (470 ohm)	        545 ohm ~0.68V	          ✅ Standard / Safe
+    R8 + 180 ohm Cable	        725 ohm ~0.51V	          ✅ Stable / Very Safe
 
 Conclusion: Keeping the 470 ohm (R8) + Solder Jumper configuration offers the best protection for your hardware while providing a "fail-safe" for any cable you might use in the future.
 

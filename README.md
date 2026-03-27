@@ -25,11 +25,11 @@ TVS Diode (1.5SMC6.8A): Provides protection against transient voltage spikes (ES
 3. PCB Design (4-Layer Stackup)
 
 The layer stack is configured for improved EMI performance:
-Stackup Structure:
-Top (PWR/Signal): Wide power traces + Ground Copper Pour.
-Internal 1 (GND): Solid Ground Plane.
-Internal 2 (GND): Solid Ground Plane.
-Bottom (PWR/Signal): Protected Video/Audio signals + Ground Copper Pour.
+Stackup Structure:\
+Top (PWR/Signal): Wide power traces + Ground Copper Pour.\
+Internal 1 (GND): Solid Ground Plane.\
+Internal 2 (GND): Solid Ground Plane.\
+Bottom (PWR/Signal): Protected Video/Audio signals + Ground Copper Pour.\
 Via Stitching: Massive via stitching connects all ground planes to minimize impedance and dissipate any residual heat into the internal layers.
 
 4. External Power & Connectivity
